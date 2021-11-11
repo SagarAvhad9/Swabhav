@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SRPSolutionApp.Model;
+using OCPSolutionApp.Lib;
+using OCPSolutionApp.Client;
 
-namespace SRPSolutionApp
+namespace OCPSolutionApp
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Invoice invoice = new Invoice(1, "Bank Invoice", 100000, 10f, 50);
-            InvoiceHtmlGenerator html = new InvoiceHtmlGenerator(invoice);
+            var fd1 = new FixedDeposit("sagar",10000,5,new DiwaliFestivalPolicy());
+            Console.WriteLine("Simple Interest:{0}",fd1.SimpleInterest());
             Console.ReadKey();
         }
     }
