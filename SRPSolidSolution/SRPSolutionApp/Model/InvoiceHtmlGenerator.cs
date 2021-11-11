@@ -8,6 +8,9 @@ namespace SRPSolutionApp.Model
 {
     class InvoiceHtmlGenerator
     {
+        public InvoiceHtmlGenerator()
+        {
 
+        }
     }
 }
